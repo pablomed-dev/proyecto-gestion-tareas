@@ -9,17 +9,31 @@ Este es un proyecto de gestión de tareas desarrollado con **Django (usando Djan
 ### 🔧 Backend
 
 - Python 3
-- Django 4
-- Django REST Framework
-- SQLite (base de datos por defecto)
-- django-cors-headers
+- asgiref==3.8.1
+- Django==5.2
+- django-cors-headers==4.7.0
+- djangorestframework==3.16.0
+- drf-yasg==1.21.10
+- inflection==0.5.1
+- numpy==2.2.2
+- packaging==25.0
+- pandas==2.2.3
+- python-dateutil==2.9.0.post0
+- pytz==2025.1
+- PyYAML==6.0.2
+- six==1.17.0
+- sqlparse==0.5.3
+- tzdata==2025.1
+- uritemplate==4.1.1
+- xlrd==2.0.1
 
 ### 🎨 Frontend
 
-- React 18
-- Vite
-- Axios
-- Bootstrap (opcional para estilos)
+- Next.js
+- React
+- TypeScript 
+- Tailwind CSS
+- Dark Mode – Implementación de modo oscuro usando clases de Tailwind
 
 ---
 
@@ -33,7 +47,9 @@ cd backend
 
 # 2. Crear y activar entorno virtual
 python -m venv env
-source env/bin/activate  # En Windows: env\Scripts\activate
+source env/bin/activate  
+# En Windows: 
+env\Scripts\activate
 
 # 3. Instalar dependencias
 pip install -r requirements.txt
@@ -46,11 +62,11 @@ python manage.py runserver
 ```
 
 📍 El backend estará disponible en:  
-`http://localhost:8000/api/tareas/`
+`http://127.0.0.1:8000/api/gestion_de_tareas/`
 
 ---
 
-### 🔜 Frontend (React)
+### 🔜 Frontend (Next.js)
 
 ```bash
 # 1. Ir a la carpeta frontend
@@ -64,42 +80,42 @@ npm run dev
 ```
 
 📍 El frontend estará disponible en:  
-`http://localhost:5173/`
+`http://localhost:3000/`
 
 ---
 
 ## 🌐 API - Endpoints
 
-Base URL: `http://localhost:8000/api/tareas/`
+Base URL: `http://127.0.0.1:8000/api/gestion_de_tareas/`
 
 ### 🔄 Obtener todas las tareas
-- **GET** `/api/tareas/`
+- **GET** `/api/gestion_de_tareas/`
 
 ### 🔎 Obtener una tarea por ID
-- **GET** `/api/tareas/<id>/`
+- **GET** `/api/gestion_de_tareas/<id>/`
 
 ### 🆕 Crear una nueva tarea
-- **POST** `/api/tareas/`
+- **POST** `/api/gestion_de_tareas/`
 ```json
 {
-  "titulo": "Aprender Django",
-  "descripcion": "Estudiar serializers y views",
-  "fecha_limite": "2025-04-30",
+  "titulo": "Prueba 1",
+  "descripcion": "Esto es la primera prueba",
+  "fecha_limite": "2025-04-22",
   "estado": "pendiente"
 }
 ```
 
 ### ✏️ Actualizar una tarea
-- **PUT** `/api/tareas/<id>/`
+- **PUT** `/api/gestion_de_tareas/<id>/`
 
 ### 🗑️ Eliminar una tarea
-- **DELETE** `/api/tareas/<id>/`
+- **DELETE** `/api/gestion_de_tareas/<id>/`
 
 ---
 
 ## 🔐 CORS y comunicación
 
-La app frontend se comunica con la API mediante Axios. Es necesario configurar `django-cors-headers` en el backend para permitir el acceso del frontend:
+Es necesario configurar `django-cors-headers` en el backend para permitir el acceso del frontend:
 
 ```python
 # settings.py
@@ -116,21 +132,6 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True  # Solo para desarrollo
 ```
-
----
-
-
-## 🖼️ Capturas de pantalla (opcional)
-
-### Lista de tareas
-
-![Lista de tareas](docs/lista-tareas.png)
-
-### Formulario de nueva tarea
-
-![Formulario nueva tarea](docs/formulario-tarea.png)
-
-> 📸 Colocá las imágenes en la carpeta `/docs` o ajustá las rutas según donde guardes las capturas.
 
 ---
 
