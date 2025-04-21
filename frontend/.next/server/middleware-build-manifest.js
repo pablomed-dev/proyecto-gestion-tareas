@@ -25,16 +25,6 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/tareas/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tareas/[id].js"
-    ],
-    "/tareas/[id]/editar": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tareas/[id]/editar.js"
-    ],
     "/tareas/nueva": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

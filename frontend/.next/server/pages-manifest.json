@@ -3,7 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/tareas/nueva": "pages/tareas/nueva.js",
-  "/tareas/[id]/editar": "pages/tareas/[id]/editar.js",
   "/tareas/[id]": "pages/tareas/[id].js",
   "/": "pages/index.js"
 }

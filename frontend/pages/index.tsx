@@ -1,10 +1,11 @@
-// pages/index.tsx
+
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 import { eliminarTarea } from "@/lib/api";
 import { useState, useEffect, useRef } from "react";
 import moment from 'moment';
 import NotificationBadge from 'components/NotificationBadge';
+import Head from 'next/head';
 
 type Tarea = {
   id: number;
@@ -14,12 +15,11 @@ type Tarea = {
   estado: string;
 };
 
-// Función para formatear fecha
 // Función para formatear fecha usando moment
 function formatearFecha(fechaIso: string): string {
   if (!fechaIso) return "";
   
-  // Configurar idioma español si deseas mostrar los meses en español
+  // Configurar idioma español
   moment.locale('es');
   
   return moment(fechaIso).format('DD-MM-YYYY');
@@ -256,6 +256,9 @@ export default function Home({ tareas: initialTareas }: { tareas: Tarea[] }) {
   
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <Head>
+        <title>Gestión de Tareas</title>
+      </Head>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
           {/* Header */}
