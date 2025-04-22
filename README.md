@@ -152,6 +152,11 @@ CORS_ALLOW_ALL_ORIGINS = True  # Solo para desarrollo
 ```
 
 ---
+## ✅ Tests
+
+Este proyecto aún no cuenta con pruebas automatizadas.
+
+---
 
 ## 🧾 Licencia
 
