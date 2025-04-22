@@ -60,14 +60,14 @@ Comunicación entre ambas capas mediante la librería `django-cors-headers`.
 ### 🔙 Backend (Django)
 
 ```bash
-# 1. Ir a la carpeta backend
-cd backend
-
-# 2. Crear y activar entorno virtual
-python -m venv env
+# 1. Activar entorno virtual desde la raíz: proyecto-gestion-tareas\
 source env/bin/activate  
 # En Windows: 
 env\Scripts\activate
+
+
+# 2. Ir a la carpeta backend
+cd backend
 
 # 3. Instalar dependencias
 pip install -r requirements.txt
